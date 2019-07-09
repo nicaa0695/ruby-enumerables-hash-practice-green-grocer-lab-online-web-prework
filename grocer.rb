@@ -6,6 +6,10 @@ def consolidate_cart(cart: [])
         con_hash[name][:count] += 1 
       else
         con_hash = con_hash.merge({name => attribute.merge({count:1})})
+      end
+    end
+  end
+  return con_hash
 end
 
 def apply_coupons(cart, coupons)
